@@ -47,7 +47,7 @@ section{
 p, pre, cite, code, audio, footer > p{
     justify-self: center;
     align-self: center;
-    width: 75%;
+    width: 100%;
 }
 
 table, ul{
