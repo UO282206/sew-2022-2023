@@ -1,0 +1,67 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, th, ul > li, label,legend{
+    color: black;
+}
+
+h2{
+    color: white;
+    padding: 0.25em;
+    background-color: #ff333d;
+    border-radius: 10%/80%;
+}
+
+h3{
+    color: white;
+    padding: 0.25em;
+    background-color: #ff333d;
+    border-radius: 20%/80%;
+}
+
+h4{
+    color: #ff4d56;
+}
+
+p, td, ol > li, input{
+    color: #373737;
+}
+
+pre, code, cite{
+    color: #272727;
+}
+
+body{
+    background-color: #E1C16E;
+}
+
+header, nav{
+    background-color: #ff333d;
+}
+
+a{
+    color: #ff333d;
+}
+
+nav a{
+    color: white;
+    background-color: #A9A9A9;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+nav a:hover{
+    color: #D51F06;
+}
+
+table, th, td{
+    border: 0.25em solid #ff333d;
+    border-collapse: collapse;
+}
+
+footer{
+    background-color: white;
+}
+
+
