@@ -21,7 +21,7 @@ h3{
 }
 
 h4{
-    color: #ff4d56;
+    color: #303030;
 }
 
 p, td, ol > li, input{
@@ -46,7 +46,7 @@ a{
 
 nav a{
     color: white;
-    background-color: #A9A9A9;
+    background-color: #545454;
     text-decoration: none;
     border: 1px solid white;
 }
