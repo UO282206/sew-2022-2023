@@ -1,67 +1,79 @@
+/* a=0 b=0 c=0 -> specificity =   0 */
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* a=0 b=0 c=6 -> specificity =   6 */
 h1, th, ul > li, label,legend{
     color: black;
+    /* Heredan el color de fondo del body */
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 h2{
     color: white;
-    padding: 0.25em;
     background-color: #ff333d;
-    border-radius: 10%/80%;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 h3{
     color: white;
-    padding: 0.25em;
     background-color: #ff333d;
-    border-radius: 20%/80%;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 h4{
     color: #303030;
+    /* Hereda el color de fondo del body */
 }
 
+/* a=0 b=0 c=5 -> specificity =   5 */
 p, td, ol > li, input{
     color: #373737;
+    /* Heredan el color de fondo del body */
 }
 
+/* a=0 b=0 c=3 -> specificity =   3 */
 pre, code, cite{
     color: #272727;
+    /* Heredan el color de fondo del body */
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 body{
     background-color: #F4E2C3;
+    /* Cada elemento tiene su propio color de primer plano pero el body tiene el de por defecto */
 }
 
+/* a=0 b=0 c=2 -> specificity =   2 */
 header, nav{
     background-color: #ff333d;
+    /* Cada elemento tiene su propio color de primer plano pero el header y el nav tienen el de por defecto */
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 a{
     color: #990008;
+    /* Hereda el color de fondo del body */
 }
 
+/* a=0 b=0 c=2 -> specificity =   2 */
 nav a{
     color: white;
     background-color: #545454;
     text-decoration: none;
-    border: 1px solid white;
 }
 
+/* a=0 b=1 c=2 -> specificity =   12 */
 nav a:hover{
     color: #D51F06;
+    /* Sigue usando el mismo color de fondo que antes */
 }
 
-table, th, td{
-    border: 0.25em solid #ff333d;
-    border-collapse: collapse;
-}
-
+/* a=0 b=0 c=1 -> specificity =   1 */
 footer{
     background-color: white;
+    /* Cada elemento tiene su propio color de primer plano pero el footer tiene el de por defecto */
 }
 
 

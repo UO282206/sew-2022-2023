@@ -1,8 +1,10 @@
+/* a=0 b=0 c=1 -> specificity =   1 */
 header{
     display: flex;
     flex-direction: row;
 }
 
+/* a=0 b=0 c=2 -> specificity =   2 */
 header > img{
     justify-self: center;
     align-self: center;
@@ -11,6 +13,7 @@ header > img{
     margin: 1em 1em 1em 1em;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 nav{
     display: flex;
     flex-direction: row;
@@ -18,43 +21,67 @@ nav{
     padding: 1em;
 }
 
+/* a=0 b=0 c=2 -> specificity =   2 */
 nav a{
     padding: 0.75em;
     margin: 0.25em;
+    border: 1px solid white;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 main{
     display: flex;
     flex-direction: column;
 }
 
+/* a=0 b=0 c=2 -> specificity =   2 */
 h1, h4{
     justify-self: center;
     align-self: center;
 }
 
-h2, h3{
+/* a=0 b=0 c=1 -> specificity =   1 */
+h2{
     justify-self: center;
     align-self: center;
     padding: 0.25em;
+    border-radius: 10%/80%;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
+h3{
+    justify-self: center;
+    align-self: center;
+    padding: 0.25em;
+    border-radius: 20%/80%;
+}
+
+/* a=0 b=0 c=1 -> specificity =   1 */
 section{
     display: flex;
     flex-direction: column;
 }
 
+/* a=0 b=0 c=7 -> specificity =   7 */
 p, pre, cite, code, audio, footer > p{
     justify-self: center;
     align-self: center;
     width: 100%;
 }
 
+/* a=0 b=0 c=3 -> specificity =   3 */
+table, th, td{
+    border: 0.25em solid #ff333d;
+    border-collapse: collapse;
+}
+
+/* a=0 b=0 c=2 -> specificity =   2 */
 table, ul{
     justify-self: center;
     align-self: center;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 fieldset{
     justify-self: center;
     align-self: center;
@@ -62,19 +89,38 @@ fieldset{
     margin-bottom: 1em;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 input{
     margin-left: 1em;
 }
 
+/* a=0 b=0 c=1 -> specificity =   1 */
 footer{
     display: flex;
     flex-direction: column;
     padding: 2em;
 }
 
+/* a=0 b=0 c=2 -> specificity =   2 */
 img, video{
     justify-self: center;
     align-self: center;
     width: 50%;
     height: auto;
+}
+
+/* Se produce un warning por el uso de la media query */
+@media screen and (min-width: 768px) {
+    /* a=0 b=0 c=2 -> specificity =   2 */
+    p, pre {
+        width: 50%;
+    }
+}
+
+/* Se produce un warning por el uso de la media query */
+@media screen and (max-width: 768px) {
+    /* a=0 b=0 c=2 -> specificity =   2 */
+    img, video {
+        width: 100%;
+    }
 }
